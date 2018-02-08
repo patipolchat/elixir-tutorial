@@ -31,5 +31,5 @@ defmodule ElixirTutorial.Accounts.User do
     change(changeset, hashed_password: Comeonin.Bcrypt.hashpwsalt(password))
   end
 
-  defp put_pass_hash(%Ecto.Changeset{valid?: false} = changeset), do: changeset
+  defp put_pass_hash(changeset), do: changeset
 end

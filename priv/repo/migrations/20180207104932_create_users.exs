@@ -3,8 +3,9 @@ defmodule ElixirTutorial.Repo.Migrations.CreateUsers do
 
   def change do
     create table(:users) do
-      add :name, :string
-      add :age, :integer      
+      add :name, :string   
+      add :email, :string
+      add :hashed_password, :string
       timestamps()
     end
     create index(:users, [:name], unique: true)

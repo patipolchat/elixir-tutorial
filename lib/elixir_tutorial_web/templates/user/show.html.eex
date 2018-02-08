@@ -8,8 +8,13 @@
   </li>
 
   <li>
-    <strong>Age:</strong>
-    <%= @user.age %>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </li>
+
+  <li>
+    <strong>Hash Password:</strong>
+    <%= @user.hashed_password %>
   </li>
 
 </ul>

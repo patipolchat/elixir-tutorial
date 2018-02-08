@@ -11,6 +11,7 @@ defmodule ElixirTutorialWeb.UserController do
 
   def new(conn, _params) do
     changeset = Accounts.change_user(%User{})
+    
     render(conn, "new.html", changeset: changeset)
   end
 

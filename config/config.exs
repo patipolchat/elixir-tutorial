@@ -22,6 +22,15 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+# Configures Guardian
+config :guardian, Guardian,
+  issuer: "elixir_tutorial",
+  secret_key: "t1jDlviI28c9lsGNJzJzoIjtBF6FBVcccMnsNAAdony/ru+V1ZD8mbMWi1L4c7tk",
+  serializer: ElixirTutorial.GuardianSerializer
+
+# Configures Bcrypt password hashing
+config :bcrypt_elixir, :log_rounds, 4
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

@@ -16,7 +16,7 @@ defmodule ElixirTutorialWeb.Router do
   scope "/", ElixirTutorialWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", UserController, :index
 
     resources "/users", UserController
   end
